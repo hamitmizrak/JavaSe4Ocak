@@ -6,18 +6,16 @@ import java.sql.SQLException;
 
 public class DbConnection {
 	
-	
 	private static Connection connection;
-	private static String url="jdbc:mysql://localhost:3306/hastane_otomasyonu";
-	private static String user="root";
-	private static String password="root";
+	private static String url = "jdbc:mysql://localhost:3306/hastane_otomasyonu";
+	private static String user = "root";
+	private static String password = "root";
 	
-	
-	public static  Connection dbConnectivy() {
+	public static Connection dbConnectivy() {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			System.out.println("driver başarılı bir şekilde yüklendi");
-			connection=DriverManager.getConnection(url, user, password);
+			connection = DriverManager.getConnection(url, user, password);
 			System.out.println("database bağlantısı başarılı.");
 			
 		} catch (ClassNotFoundException | SQLException e) {
@@ -29,9 +27,7 @@ public class DbConnection {
 	}
 	
 	/*
-	public static void main(String[] args) {
-		dbConnectivy();
-	}
-	*/
+	 * public static void main(String[] args) { dbConnectivy(); }
+	 */
 	
 }
