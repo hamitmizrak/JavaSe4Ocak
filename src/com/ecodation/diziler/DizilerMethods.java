@@ -41,7 +41,7 @@ public class DizilerMethods {
 
 		}
 
-		// forEach
+		// forEach deneme
 		for (int temp : dizi) {
 			System.out.print(temp + " ");
 		}
