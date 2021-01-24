@@ -3,14 +3,18 @@ package com.ecodation.oop;
 //pojo
 public class Student {
 
-	// nesne değişkenleri
-	private String name;
+	// nesne değişkenleri //global değişkenler
+	String name;
 	private String surname;
-	private String identity;
+
+	// Class değişkeni
+	private static String identity;
 
 	// getter and setter
 	public String getName() {
 		return name;
+
+		// this.name //global değişkenler
 	}
 
 	public void setName(String name) {
@@ -27,10 +31,8 @@ public class Student {
 
 	public String getIdentity() {
 		return identity;
-	}
 
-	public void setIdentity(String identity) {
-		this.identity = identity;
+		// this.name
 	}
 
 }
